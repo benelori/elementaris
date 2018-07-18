@@ -1,4 +1,4 @@
-package com.elementaris.core.model.inventory;
+package game.core.model.inventory;
 
 public enum ItemType {
 	EQUIPMENT, USABLE
