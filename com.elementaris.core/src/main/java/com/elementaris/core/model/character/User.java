@@ -1,6 +1,6 @@
-package com.elementaris.model.character;
+package com.elementaris.core.model.character;
 
-import com.elementaris.model.map.Location;
+import com.elementaris.core.model.map.Location;
 
 import game.core.model.character.AbstractCharacter;
 

@@ -1,4 +1,4 @@
-package com.elementaris.model.map;
+package com.elementaris.core.model.map;
 
 import java.util.List;
 

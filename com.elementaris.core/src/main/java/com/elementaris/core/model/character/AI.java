@@ -1,4 +1,4 @@
-package com.elementaris.model.character;
+package com.elementaris.core.model.character;
 
 import game.core.model.character.AbstractCharacter;
 
