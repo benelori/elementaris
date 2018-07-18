@@ -5,13 +5,19 @@
 	<groupId>com.elementaris</groupId>
 	<artifactId>com.elementaris.core</artifactId>
 	<version>0.1.0</version>
-	
+
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
 			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>game.core.model</groupId>
+			<artifactId>game.core.model</artifactId>
+			<version>0.1.0</version>
 		</dependency>
 
 		<dependency>
@@ -34,18 +40,10 @@
 	</dependencies>
 	<build>
 		<plugins>
-			<!-- <plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-war-plugin</artifactId>
-				<configuration>
-					<webXml>webapp\WEB-INF\web.xml</webXml>
-				</configuration>
-				<version>0.0.1-SNAPSHOT</version>
-			</plugin> -->
 			<plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
 		</plugins>
 		<finalName>Elementaris</finalName>
 	</build>
