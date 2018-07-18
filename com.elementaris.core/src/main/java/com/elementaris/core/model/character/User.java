@@ -1,6 +1,6 @@
 package com.elementaris.core.model.character;
 
-import com.elementaris.core.model.level.Level;
+import com.elementaris.core.model.level.LevelType;
 import com.elementaris.core.model.map.Location;
 
 import game.core.model.character.AbstractCharacter;
@@ -11,7 +11,7 @@ public class User extends AbstractCharacter {
 	private String password;
 	private Location location;
 	private Inventory inventory;
-	private Level level;
+	private LevelType level;
 	private long experience;
 
 	public String getUsername() {
@@ -46,11 +46,11 @@ public class User extends AbstractCharacter {
 		this.inventory = inventory;
 	}
 
-	public Level getLevel() {
+	public LevelType getLevel() {
 		return level;
 	}
 
-	public void setLevel(Level level) {
+	public void setLevel(LevelType level) {
 		this.level = level;
 	}
 
