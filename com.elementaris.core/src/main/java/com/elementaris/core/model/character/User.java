@@ -1,5 +1,6 @@
 package com.elementaris.core.model.character;
 
+import com.elementaris.core.model.camp.CampType;
 import com.elementaris.core.model.level.LevelType;
 import com.elementaris.core.model.map.Location;
 
