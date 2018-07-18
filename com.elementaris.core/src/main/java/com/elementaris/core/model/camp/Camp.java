@@ -1,4 +1,4 @@
-package com.elementaris.core.model.character;
+package com.elementaris.core.model.camp;
 
 import com.elementaris.core.model.map.Location;
 
