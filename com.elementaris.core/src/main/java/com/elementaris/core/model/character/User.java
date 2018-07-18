@@ -13,6 +13,7 @@ public class User extends AbstractCharacter {
 	private Inventory inventory;
 	private LevelType level;
 	private long experience;
+	private CampType campType;
 
 	public String getUsername() {
 		return username;
@@ -60,6 +61,14 @@ public class User extends AbstractCharacter {
 
 	public void setExperience(long experience) {
 		this.experience = experience;
+	}
+
+	public CampType getCampType() {
+		return campType;
+	}
+
+	public void setCampType(CampType campType) {
+		this.campType = campType;
 	}
 
 }
