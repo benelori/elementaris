@@ -6,6 +6,7 @@ public class MainStats extends AbstractPersistentObject {
 	private int health;
 	private int stamina;
 	private int magic;
+	private int armor;
 
 	public int getHealth() {
 		return health;
@@ -29,6 +30,14 @@ public class MainStats extends AbstractPersistentObject {
 
 	public void setMagic(int magic) {
 		this.magic = magic;
+	}
+
+	public int getArmor() {
+		return armor;
+	}
+
+	public void setArmor(int armor) {
+		this.armor = armor;
 	}
 
 }

@@ -1,18 +1,69 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Getting Started: Serving Web Content</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
-<table>
-  <th th:text="dsasdsa">...</th>
-  <th th:text="dsasdsa">...</th>
-</table>
-
-<a th:href="@{/secretstuff}">secret</a>
-
-<form th:action="@{/doit}">
-
-https://spring.io/guides/gs/handling-form-submission/
-yolo
+<body>
+	<form th:action="@{/secretstuff/ai}" th:object="${ai}" th:method="post">
+		<div>
+			Basic attributes
+			<table>
+				<tr>
+					<th>Name:</th>
+					<th><input type="text" id="name" name="name" value=""></th>
+				</tr>
+				<tr>
+					<th>Chance:</th>
+					<th><input type="text" id="chance" name="chance" value=""></th>
+				</tr>
+			</table>
+		</div>
+		<div>
+			Main stats
+			<table>
+				<tr>
+					<th>Health:</th>
+					<th><input type="text" id="health" name="health" value=""></th>
+				</tr>
+				<tr>
+					<th>Stamina:</th>
+					<th><input type="text" id="stamina" name="stamina" value=""></th>
+				</tr>
+				<tr>
+					<th>Magic:</th>
+					<th><input type="text" id="magic" name="magic" value=""></th>
+				</tr>
+				<tr>
+					<th>Armor:</th>
+					<th><input type="text" id="armor" name="armor" value=""></th>
+				</tr>
+			</table>
+		</div>
+		<div>
+			Secondary stats
+			<table>
+				<tr>
+					<th>Strength:</th>
+					<th><input type="text" id="strength" name="strength" value=""></th>
+				</tr>
+				<tr>
+					<th>Dexterity:</th>
+					<th><input type="text" id="dexterity" name="dexterity"
+						value=""></th>
+				</tr>
+				<tr>
+					<th>Intelligence:</th>
+					<th><input type="text" id="intelligence" name="intelligence"
+						value=""></th>
+				</tr>
+				<tr>
+					<th>Constitution:</th>
+					<th><input type="text" id="constitution" name="constitution"
+						value=""></th>
+				</tr>
+			</table>
+		</div>
+		<button type="submit">Submit</button>
+	</form>
+</body>
 </html>
