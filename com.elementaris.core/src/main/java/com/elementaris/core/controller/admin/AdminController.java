@@ -5,10 +5,11 @@ import java.util.Arrays;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import com.elementaris.core.controller.ControllerConstants;
+import com.elementaris.core.model.character.AIBuilder;
 
 @Controller
 public class AdminController {
@@ -25,8 +26,9 @@ public class AdminController {
 		return ADMIN_AI_VIEW;
 	}
 
-	@RequestMapping(value = ADMIN_AI_MAPPING, method = RequestMethod.POST)
-	public String saveAi(Model model) {
+	@PostMapping(ADMIN_AI_MAPPING)
+	public String saveAi(@ModelAttribute("ai") AIBuilder ai, Model model) {
+		System.out.println(ai.build());
 		return ADMIN_AI_VIEW;
 	}
 

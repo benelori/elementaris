@@ -38,4 +38,10 @@ public class SecondaryStats {
 		this.constitution = constitution;
 	}
 
+	@Override
+	public String toString() {
+		return "SecondaryStats [strength=" + strength + ", dexterity=" + dexterity + ", intelligence=" + intelligence
+				+ ", constitution=" + constitution + "]";
+	}
+
 }

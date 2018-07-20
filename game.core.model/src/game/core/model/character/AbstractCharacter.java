@@ -31,4 +31,10 @@ public class AbstractCharacter extends AbstractPersistentObject {
 		this.characterType = characterType;
 	}
 
+	@Override
+	public String toString() {
+		return "AbstractCharacter [mainStats=" + mainStats + ", secondaryStats=" + secondaryStats + ", characterType="
+				+ characterType + "]";
+	}
+
 }

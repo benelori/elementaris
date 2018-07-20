@@ -10,15 +10,15 @@
 			<table>
 				<tr>
 					<th>Name:</th>
-					<th><input type="text" id="name" name="name" value=""></th>
+					<th><input th:field="*{name}" type="text" id="name" name="name" value=""></th>
 				</tr>
 				<tr>
 					<th>Chance:</th>
-					<th><input type="text" id="chance" name="chance" value=""></th>
+					<th><input type="number" id="chance" name="chance" value=""></th>
 				</tr>
 			</table>
 		</div>
-		<div>
+		<!-- <div>
 			Main stats
 			<table>
 				<tr>
@@ -62,7 +62,7 @@
 						value=""></th>
 				</tr>
 			</table>
-		</div>
+		</div> -->
 		<button type="submit">Submit</button>
 	</form>
 </body>

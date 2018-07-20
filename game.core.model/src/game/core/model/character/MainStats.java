@@ -40,4 +40,9 @@ public class MainStats extends AbstractPersistentObject {
 		this.armor = armor;
 	}
 
+	@Override
+	public String toString() {
+		return "MainStats [health=" + health + ", stamina=" + stamina + ", magic=" + magic + ", armor=" + armor + "]";
+	}
+
 }

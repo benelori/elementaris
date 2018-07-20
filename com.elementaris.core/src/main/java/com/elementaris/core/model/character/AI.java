@@ -22,4 +22,9 @@ public class AI extends AbstractCharacter {
 		this.chanceToAppear = chanceToAppear;
 	}
 
+	@Override
+	public String toString() {
+		return "AI [name=" + name + ", chanceToAppear=" + chanceToAppear + ", " + super.toString() + "]";
+	}
+
 }
