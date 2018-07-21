@@ -10,32 +10,32 @@
 			<table>
 				<tr>
 					<th>Name:</th>
-					<th><input th:field="*{name}" type="text" id="name" name="name" value=""></th>
+					<th><input th:field="*{name}" type="text" id="name" name="name" ></th>
 				</tr>
 				<tr>
 					<th>Chance:</th>
-					<th><input type="number" id="chance" name="chance" value=""></th>
+					<th><input th:field="*{chanceToAppear}" type="text" id="chance" name="chance" ></th>
 				</tr>
 			</table>
 		</div>
-		<!-- <div>
+		 <div>
 			Main stats
 			<table>
 				<tr>
 					<th>Health:</th>
-					<th><input type="text" id="health" name="health" value=""></th>
+					<th><input th:field="*{health}" type="text" id="health" name="health" value=0></th>
 				</tr>
 				<tr>
 					<th>Stamina:</th>
-					<th><input type="text" id="stamina" name="stamina" value=""></th>
+					<th><input th:field="*{stamina}" type="text" id="stamina" name="stamina" value=0></th>
 				</tr>
 				<tr>
 					<th>Magic:</th>
-					<th><input type="text" id="magic" name="magic" value=""></th>
+					<th><input th:field="*{magic}" type="text" id="magic" name="magic" value=0></th>
 				</tr>
 				<tr>
 					<th>Armor:</th>
-					<th><input type="text" id="armor" name="armor" value=""></th>
+					<th><input th:field="*{armor}" type="text" id="armor" name="armor" value=0></th>
 				</tr>
 			</table>
 		</div>
@@ -44,25 +44,25 @@
 			<table>
 				<tr>
 					<th>Strength:</th>
-					<th><input type="text" id="strength" name="strength" value=""></th>
+					<th><input th:field="*{strength}" type="text" id="strength" name="strength" value=0></th>
 				</tr>
 				<tr>
 					<th>Dexterity:</th>
-					<th><input type="text" id="dexterity" name="dexterity"
-						value=""></th>
+					<th><input th:field="*{dexterity}" type="text" id="dexterity" name="dexterity"
+						value=0></th>
 				</tr>
 				<tr>
 					<th>Intelligence:</th>
-					<th><input type="text" id="intelligence" name="intelligence"
-						value=""></th>
+					<th><input th:field="*{intelligence}" type="text" id="intelligence" name="intelligence"
+						value=0></th>
 				</tr>
 				<tr>
 					<th>Constitution:</th>
-					<th><input type="text" id="constitution" name="constitution"
-						value=""></th>
+					<th><input th:field="*{constitution}" type="text" id="constitution" name="constitution"
+						value=0></th>
 				</tr>
 			</table>
-		</div> -->
+		</div> 
 		<button type="submit">Submit</button>
 	</form>
 </body>

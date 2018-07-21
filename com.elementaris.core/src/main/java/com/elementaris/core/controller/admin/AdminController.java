@@ -4,12 +4,15 @@ import java.util.Arrays;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.elementaris.core.controller.ControllerConstants;
-import com.elementaris.core.model.character.AIBuilder;
+import com.elementaris.core.controller.admin.form.AIForm;
+import com.elementaris.core.helper.BuilderHelper;
+import com.elementaris.core.model.character.AI;
 
 @Controller
 public class AdminController {
@@ -17,19 +20,20 @@ public class AdminController {
 	private final static String ADMIN_MAPPING = "/" + ControllerConstants.ADMIN;
 	private final static String ADMIN_VIEW = ADMIN_VIEW_PREFIX + ControllerConstants.ADMIN;
 	private final static String ADMIN_AI_MAPPING = ADMIN_MAPPING + "/" + ControllerConstants.ADMIN_AI;
-	private final static String ADMIN_AI_VIEW = ADMIN_VIEW_PREFIX + "/" + ControllerConstants.ADMIN_AI;
+	private final static String ADMIN_AI_VIEW = ADMIN_VIEW_PREFIX + ControllerConstants.ADMIN_AI;
 	private final static String ADMIN_TECHNIQUE_MAPPING = ADMIN_MAPPING + "/" + ControllerConstants.ADMIN_TECHNIQUE;
-	private final static String ADMIN_TECHNIQUE_VIEW = ADMIN_VIEW_PREFIX + "/" + ControllerConstants.ADMIN_TECHNIQUE;
+	private final static String ADMIN_TECHNIQUE_VIEW = ADMIN_VIEW_PREFIX + ControllerConstants.ADMIN_TECHNIQUE;
 
 	@GetMapping(ADMIN_AI_MAPPING)
-	public String adminAIView(Model model) {
+	public String adminAIView(@ModelAttribute("ai") AIForm aiForm, ModelMap model) {
 		return ADMIN_AI_VIEW;
 	}
 
 	@PostMapping(ADMIN_AI_MAPPING)
-	public String saveAi(@ModelAttribute("ai") AIBuilder ai, Model model) {
-		System.out.println(ai.build());
-		return ADMIN_AI_VIEW;
+	public String saveAi(@ModelAttribute("ai") AIForm aiForm, Model model) {
+		AI ai = BuilderHelper.buildAiFrom(aiForm);
+		System.out.println(ai);
+		return "redirect:" + ADMIN_AI_MAPPING;
 	}
 
 	@GetMapping(ADMIN_TECHNIQUE_MAPPING)

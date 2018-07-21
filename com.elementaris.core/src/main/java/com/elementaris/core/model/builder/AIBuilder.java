@@ -1,9 +1,13 @@
-package com.elementaris.core.model.character;
+package com.elementaris.core.model.builder;
 
+import com.elementaris.core.helper.Builder;
+import com.elementaris.core.model.character.AI;
+
+import game.core.model.character.CharacterType;
 import game.core.model.character.MainStats;
 import game.core.model.character.SecondaryStats;
 
-public class AIBuilder {
+public class AIBuilder implements Builder<AI> {
 	private String name;
 	private int chanceToAppear;
 	private int health;
@@ -15,84 +19,54 @@ public class AIBuilder {
 	private int intelligence;
 	private int constitution;
 
-	public int getChanceToAppear() {
-		return chanceToAppear;
-	}
-
-	public void setChanceToAppear(int chanceToAppear) {
-		this.chanceToAppear = chanceToAppear;
-	}
-
-	public int getHealth() {
-		return health;
-	}
-
-	public void setHealth(int health) {
-		this.health = health;
-	}
-
-	public int getStamina() {
-		return stamina;
-	}
-
-	public void setStamina(int stamina) {
-		this.stamina = stamina;
-	}
-
-	public int getMagic() {
-		return magic;
-	}
-
-	public void setMagic(int magic) {
-		this.magic = magic;
-	}
-
-	public int getArmor() {
-		return armor;
-	}
-
-	public void setArmor(int armor) {
-		this.armor = armor;
-	}
-
-	public int getStrength() {
-		return strength;
-	}
-
-	public void setStrength(int strength) {
-		this.strength = strength;
-	}
-
-	public int getDexterity() {
-		return dexterity;
-	}
-
-	public void setDexterity(int dexterity) {
-		this.dexterity = dexterity;
-	}
-
-	public int getIntelligence() {
-		return intelligence;
-	}
-
-	public void setIntelligence(int intelligence) {
-		this.intelligence = intelligence;
-	}
-
-	public int getConstitution() {
-		return constitution;
-	}
-
-	public void setConstitution(int constitution) {
-		this.constitution = constitution;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
+	public AIBuilder setName(String name) {
 		this.name = name;
+		return this;
+	}
+
+	public AIBuilder setChanceToAppear(int chanceToAppear) {
+		this.chanceToAppear = chanceToAppear;
+		return this;
+	}
+
+	public AIBuilder setHealth(int health) {
+		this.health = health;
+		return this;
+	}
+
+	public AIBuilder setStamina(int stamina) {
+		this.stamina = stamina;
+		return this;
+	}
+
+	public AIBuilder setMagic(int magic) {
+		this.magic = magic;
+		return this;
+	}
+
+	public AIBuilder setArmor(int armor) {
+		this.armor = armor;
+		return this;
+	}
+
+	public AIBuilder setStrength(int strength) {
+		this.strength = strength;
+		return this;
+	}
+
+	public AIBuilder setDexterity(int dexterity) {
+		this.dexterity = dexterity;
+		return this;
+	}
+
+	public AIBuilder setIntelligence(int intelligence) {
+		this.intelligence = intelligence;
+		return this;
+	}
+
+	public AIBuilder setConstitution(int constitution) {
+		this.constitution = constitution;
+		return this;
 	}
 
 	public AI build() {
@@ -111,6 +85,7 @@ public class AIBuilder {
 		ai.setChanceToAppear(chanceToAppear);
 		ai.setMainStats(mainStats);
 		ai.setSecondaryStats(secStats);
+		ai.setCharacterType(CharacterType.AI);
 		return ai;
 	}
 
