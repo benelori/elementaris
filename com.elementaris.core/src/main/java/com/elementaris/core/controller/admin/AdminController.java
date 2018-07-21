@@ -31,7 +31,7 @@ public class AdminController {
 
 	@PostMapping(ADMIN_AI_MAPPING)
 	public String saveAi(@ModelAttribute("ai") AIForm aiForm, Model model) {
-		AI ai = BuilderHelper.buildAiFrom(aiForm);
+		AI ai = BuilderHelper.buildAi(aiForm);
 		System.out.println(ai);
 		return "redirect:" + ADMIN_AI_MAPPING;
 	}

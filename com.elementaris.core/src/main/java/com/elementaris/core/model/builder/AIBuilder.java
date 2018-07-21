@@ -1,6 +1,7 @@
 package com.elementaris.core.model.builder;
 
 import com.elementaris.core.helper.Builder;
+import com.elementaris.core.helper.BuilderHelper;
 import com.elementaris.core.model.character.AI;
 
 import game.core.model.character.CharacterType;
@@ -70,16 +71,8 @@ public class AIBuilder implements Builder<AI> {
 	}
 
 	public AI build() {
-		MainStats mainStats = new MainStats();
-		mainStats.setHealth(health);
-		mainStats.setStamina(stamina);
-		mainStats.setMagic(magic);
-		mainStats.setArmor(armor);
-		SecondaryStats secStats = new SecondaryStats();
-		secStats.setConstitution(constitution);
-		secStats.setIntelligence(intelligence);
-		secStats.setDexterity(dexterity);
-		secStats.setStrength(strength);
+		MainStats mainStats = BuilderHelper.buildMainStats(health, stamina, magic, armor);
+		SecondaryStats secStats = BuilderHelper.buildSecondaryStats(strength, intelligence, dexterity, constitution);
 		AI ai = new AI();
 		ai.setName(name);
 		ai.setChanceToAppear(chanceToAppear);
