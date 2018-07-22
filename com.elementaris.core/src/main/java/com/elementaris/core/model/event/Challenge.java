@@ -1,8 +1,17 @@
 package com.elementaris.core.model.event;
 
 public abstract class Challenge {
+	private long id;
 	private boolean done;
 	private String description;
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
 
 	public boolean isDone() {
 		return done;

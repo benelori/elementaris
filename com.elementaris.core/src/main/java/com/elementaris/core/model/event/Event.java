@@ -2,11 +2,18 @@ package com.elementaris.core.model.event;
 
 import java.util.List;
 
-import game.core.model.AbstractPersistentObject;
-
-public abstract class Event extends AbstractPersistentObject {
+public abstract class Event {
+	private long id;
 	private Reward reward;
 	private List<Challenge> challenges;
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
 
 	public Reward getReward() {
 		return reward;

@@ -2,11 +2,18 @@ package com.elementaris.core.model.map;
 
 import java.util.List;
 
-import game.core.model.AbstractPersistentObject;
-
-public class Region extends AbstractPersistentObject {
+public class Region {
+	private long id;
 	private String name;
 	private List<Location> locations;
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
 
 	public String getName() {
 		return name;

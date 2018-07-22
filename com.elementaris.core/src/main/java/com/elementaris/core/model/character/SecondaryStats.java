@@ -1,4 +1,4 @@
-package game.core.model.character;
+package com.elementaris.core.model.character;
 
 public class SecondaryStats {
 	private int strength;
@@ -36,6 +36,12 @@ public class SecondaryStats {
 
 	public void setConstitution(int constitution) {
 		this.constitution = constitution;
+	}
+
+	@Override
+	public String toString() {
+		return "SecondaryStats [strength=" + strength + ", dexterity=" + dexterity + ", intelligence=" + intelligence
+				+ ", constitution=" + constitution + "]";
 	}
 
 }
