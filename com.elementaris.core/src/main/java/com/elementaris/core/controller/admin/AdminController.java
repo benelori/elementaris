@@ -29,7 +29,6 @@ public class AdminController {
 
 	@GetMapping(ADMIN_AI_MAPPING)
 	public String adminAIView(@ModelAttribute("ai") AIForm aiForm, ModelMap model) {
-		List<AI> ais = findAllAis();
 		return ADMIN_AI_VIEW;
 	}
 
