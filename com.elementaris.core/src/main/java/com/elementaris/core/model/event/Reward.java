@@ -2,12 +2,21 @@ package com.elementaris.core.model.event;
 
 import java.util.List;
 
-import game.core.model.inventory.Item;
+import com.elementaris.core.model.inventory.Item;
 
 public class Reward {
+	private long id;
 	private int experience;
 	private int coins;
 	private List<Item> items;
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
 
 	public int getExperience() {
 		return experience;

@@ -3,10 +3,9 @@ package com.elementaris.core.model.builder;
 import com.elementaris.core.helper.Builder;
 import com.elementaris.core.helper.BuilderHelper;
 import com.elementaris.core.model.character.AI;
-
-import game.core.model.character.CharacterType;
-import game.core.model.character.MainStats;
-import game.core.model.character.SecondaryStats;
+import com.elementaris.core.model.character.CharacterType;
+import com.elementaris.core.model.character.MainStats;
+import com.elementaris.core.model.character.SecondaryStats;
 
 public class AIBuilder implements Builder<AI> {
 	private String name;

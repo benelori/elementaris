@@ -1,13 +1,12 @@
 package com.elementaris.core.model.character;
 
 import com.elementaris.core.model.camp.CampType;
+import com.elementaris.core.model.inventory.Inventory;
 import com.elementaris.core.model.level.LevelType;
 import com.elementaris.core.model.map.Location;
 
-import game.core.model.character.AbstractCharacter;
-import game.core.model.inventory.Inventory;
-
-public class User extends AbstractCharacter {
+public class User {
+	private long id;
 	private String username;
 	private String password;
 	private Location location;
@@ -15,6 +14,14 @@ public class User extends AbstractCharacter {
 	private LevelType level;
 	private long experience;
 	private CampType campType;
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
 
 	public String getUsername() {
 		return username;

@@ -1,6 +1,7 @@
 package com.elementaris.core.controller.admin;
 
 import java.util.Arrays;
+import java.util.List;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,6 +14,8 @@ import com.elementaris.core.controller.ControllerConstants;
 import com.elementaris.core.controller.admin.form.AIForm;
 import com.elementaris.core.helper.BuilderHelper;
 import com.elementaris.core.model.character.AI;
+import com.elementaris.core.model.character.MainStats;
+import com.elementaris.core.model.character.SecondaryStats;
 
 @Controller
 public class AdminController {
@@ -26,6 +29,7 @@ public class AdminController {
 
 	@GetMapping(ADMIN_AI_MAPPING)
 	public String adminAIView(@ModelAttribute("ai") AIForm aiForm, ModelMap model) {
+		List<AI> ais = findAllAis();
 		return ADMIN_AI_VIEW;
 	}
 
@@ -45,6 +49,16 @@ public class AdminController {
 	public String adminView(Model model) {
 		model.addAttribute("selectedViews", Arrays.asList("a", "b"));
 		return ADMIN_VIEW;
+	}
+
+	@ModelAttribute("ais")
+	private List<AI> findAllAis() {
+		AI ai = new AI();
+		ai.setName("namefdsaf");
+		ai.setChanceToAppear(50);
+		ai.setMainStats(new MainStats());
+		ai.setSecondaryStats(new SecondaryStats());
+		return Arrays.asList(ai);
 	}
 
 }

@@ -5,9 +5,8 @@ import com.elementaris.core.model.builder.AIBuilder;
 import com.elementaris.core.model.builder.MainStatsBuilder;
 import com.elementaris.core.model.builder.SecondaryStatsBuilder;
 import com.elementaris.core.model.character.AI;
-
-import game.core.model.character.MainStats;
-import game.core.model.character.SecondaryStats;
+import com.elementaris.core.model.character.MainStats;
+import com.elementaris.core.model.character.SecondaryStats;
 
 public final class BuilderHelper {
 	public static AI buildAi(AIForm aiForm) {

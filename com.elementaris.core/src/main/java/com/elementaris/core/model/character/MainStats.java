@@ -1,8 +1,6 @@
-package game.core.model.character;
+package com.elementaris.core.model.character;
 
-import game.core.model.AbstractPersistentObject;
-
-public class MainStats extends AbstractPersistentObject {
+public class MainStats {
 	private int health;
 	private int stamina;
 	private int magic;

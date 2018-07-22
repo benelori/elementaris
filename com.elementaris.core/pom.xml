@@ -15,12 +15,6 @@
 		</dependency>
 
 		<dependency>
-			<groupId>game.core.model</groupId>
-			<artifactId>game.core.model</artifactId>
-			<version>0.1.0</version>
-		</dependency>
-
-		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 			<version>2.0.3.RELEASE</version>

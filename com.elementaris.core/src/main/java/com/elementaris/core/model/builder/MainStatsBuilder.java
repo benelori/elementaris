@@ -1,8 +1,7 @@
 package com.elementaris.core.model.builder;
 
 import com.elementaris.core.helper.Builder;
-
-import game.core.model.character.MainStats;
+import com.elementaris.core.model.character.MainStats;
 
 public class MainStatsBuilder implements Builder<MainStats> {
 	private int health;

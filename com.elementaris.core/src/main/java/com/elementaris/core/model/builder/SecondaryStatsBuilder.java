@@ -1,8 +1,7 @@
 package com.elementaris.core.model.builder;
 
 import com.elementaris.core.helper.Builder;
-
-import game.core.model.character.SecondaryStats;
+import com.elementaris.core.model.character.SecondaryStats;
 
 public class SecondaryStatsBuilder implements Builder<SecondaryStats> {
 	private int strength;
