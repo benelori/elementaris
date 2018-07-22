@@ -2,11 +2,18 @@ package com.elementaris.core.model.camp;
 
 import com.elementaris.core.model.map.Location;
 
-import game.core.model.AbstractPersistentObject;
-
-public class Camp extends AbstractPersistentObject {
+public class Camp {
+	private long id;
 	private Location location;
 	private CampType campType;
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
 
 	public Location getLocation() {
 		return location;

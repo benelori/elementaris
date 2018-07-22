@@ -1,11 +1,10 @@
-package game.core.model.character;
+package com.elementaris.core.model.character;
 
-import game.core.model.AbstractPersistentObject;
-
-public class MainStats extends AbstractPersistentObject {
+public class MainStats {
 	private int health;
 	private int stamina;
 	private int magic;
+	private int armor;
 
 	public int getHealth() {
 		return health;
@@ -29,6 +28,19 @@ public class MainStats extends AbstractPersistentObject {
 
 	public void setMagic(int magic) {
 		this.magic = magic;
+	}
+
+	public int getArmor() {
+		return armor;
+	}
+
+	public void setArmor(int armor) {
+		this.armor = armor;
+	}
+
+	@Override
+	public String toString() {
+		return "MainStats [health=" + health + ", stamina=" + stamina + ", magic=" + magic + ", armor=" + armor + "]";
 	}
 
 }

@@ -1,4 +1,4 @@
-package game.core.model.character;
+package com.elementaris.core.model.character;
 
 public enum CharacterType {
 	PLAYER, AI

@@ -1,8 +1,7 @@
 package com.elementaris.core.model.map;
 
-import game.core.model.AbstractPersistentObject;
+public class Location {
 
-public class Location extends AbstractPersistentObject {
 	private int x;
 	private int y;
 
