@@ -1,6 +1,6 @@
 package com.elementaris.model.character;
 
-import com.elementaris.model.camp.CampType;
+import com.elementaris.model.camp.ElementType;
 import com.elementaris.model.inventory.Inventory;
 import com.elementaris.model.level.LevelType;
 import com.elementaris.model.map.Location;
@@ -11,7 +11,7 @@ public class Player {
 	private Inventory inventory;
 	private LevelType level;
 	private long experience;
-	private CampType campType;
+	private ElementType campType;
 
 	public long getId() {
 		return id;
@@ -53,11 +53,11 @@ public class Player {
 		this.experience = experience;
 	}
 
-	public CampType getCampType() {
+	public ElementType getCampType() {
 		return campType;
 	}
 
-	public void setCampType(CampType campType) {
+	public void setCampType(ElementType campType) {
 		this.campType = campType;
 	}
 

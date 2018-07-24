@@ -1,5 +1,5 @@
 package com.elementaris.model.camp;
 
-public enum CampType {
+public enum ElementType {
 	WATER, FIRE, EARTH, WIND, LIGHTNING
 }

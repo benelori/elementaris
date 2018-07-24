@@ -5,7 +5,7 @@ import com.elementaris.model.map.Location;
 public class Camp {
 	private long id;
 	private Location location;
-	private CampType campType;
+	private ElementType elementType;
 
 	public long getId() {
 		return id;
@@ -23,12 +23,12 @@ public class Camp {
 		this.location = location;
 	}
 
-	public CampType getCampType() {
-		return campType;
+	public ElementType getElementType() {
+		return elementType;
 	}
 
-	public void setCampType(CampType campType) {
-		this.campType = campType;
+	public void setElementType(ElementType elementType) {
+		this.elementType = elementType;
 	}
 
 }
