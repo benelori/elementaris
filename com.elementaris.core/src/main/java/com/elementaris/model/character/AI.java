@@ -1,7 +1,5 @@
 package com.elementaris.model.character;
 
-import java.util.List;
-
 import com.elementaris.model.technique.Technique;
 
 public class AI {
@@ -11,7 +9,7 @@ public class AI {
 	private MainStats mainStats;
 	private SecondaryStats secondaryStats;
 	private CharacterType characterType;
-	private List<Technique> usingTechniques;
+	private Technique technique;
 
 	public long getId() {
 		return id;
@@ -61,19 +59,19 @@ public class AI {
 		this.characterType = characterType;
 	}
 
-	public List<Technique> getUsingTechniques() {
-		return usingTechniques;
+	public Technique getTechnique() {
+		return technique;
 	}
 
-	public void setUsingTechniques(List<Technique> usingTechniques) {
-		this.usingTechniques = usingTechniques;
+	public void setTechnique(Technique technique) {
+		this.technique = technique;
 	}
 
 	@Override
 	public String toString() {
 		return "AI [id=" + id + ", name=" + name + ", chanceToAppear=" + chanceToAppear + ", mainStats=" + mainStats
-				+ ", secondaryStats=" + secondaryStats + ", characterType=" + characterType + ", usingTechniques="
-				+ usingTechniques + "]";
+				+ ", secondaryStats=" + secondaryStats + ", characterType=" + characterType + ", technique=" + technique
+				+ "]";
 	}
 
 }
