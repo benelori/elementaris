@@ -14,8 +14,7 @@ import com.elementaris.controller.ControllerConstants;
 import com.elementaris.controller.admin.form.AIForm;
 import com.elementaris.helper.BuilderHelper;
 import com.elementaris.model.character.AI;
-import com.elementaris.model.character.MainStats;
-import com.elementaris.model.character.SecondaryStats;
+import com.elementaris.model.technique.Technique;
 
 @Controller
 public class AdminController {
@@ -52,12 +51,12 @@ public class AdminController {
 
 	@ModelAttribute("ais")
 	private List<AI> findAllAis() {
-		AI ai = new AI();
-		ai.setName("namefdsaf");
-		ai.setChanceToAppear(50);
-		ai.setMainStats(new MainStats());
-		ai.setSecondaryStats(new SecondaryStats());
-		return Arrays.asList(ai);
+		return GetAll.findAllAis();
+	}
+
+	@ModelAttribute("techniques")
+	private List<Technique> findAllTechniques() {
+		return GetAll.findAllTechniques();
 	}
 
 }
