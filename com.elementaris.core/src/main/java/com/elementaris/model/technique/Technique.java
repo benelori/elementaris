@@ -4,6 +4,7 @@ import com.elementaris.model.camp.ElementType;
 
 public class Technique {
 	private long id;
+	private String name;
 	private int baseDamage;
 	private String description;
 	private String attackDescription;
@@ -15,6 +16,14 @@ public class Technique {
 
 	public void setId(long id) {
 		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public int getBaseDamage() {
