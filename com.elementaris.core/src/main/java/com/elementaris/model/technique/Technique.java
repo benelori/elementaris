@@ -1,4 +1,4 @@
-package com.elementaris.model.camp.technique;
+package com.elementaris.model.technique;
 
 import com.elementaris.model.camp.ElementType;
 

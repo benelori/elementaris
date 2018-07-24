@@ -1,9 +1,12 @@
 package com.elementaris.model.character;
 
+import java.util.List;
+
 import com.elementaris.model.camp.ElementType;
 import com.elementaris.model.inventory.Inventory;
 import com.elementaris.model.level.LevelType;
 import com.elementaris.model.map.Location;
+import com.elementaris.model.technique.Technique;
 
 public class Player {
 	private long id;
@@ -12,6 +15,8 @@ public class Player {
 	private LevelType level;
 	private long experience;
 	private ElementType campType;
+	private List<Technique> learnedTechniques;
+	private List<Technique> usingTechniques;
 
 	public long getId() {
 		return id;
@@ -59,6 +64,22 @@ public class Player {
 
 	public void setCampType(ElementType campType) {
 		this.campType = campType;
+	}
+
+	public List<Technique> getLearnedTechniques() {
+		return learnedTechniques;
+	}
+
+	public void setLearnedTechniques(List<Technique> learnedTechniques) {
+		this.learnedTechniques = learnedTechniques;
+	}
+
+	public List<Technique> getUsingTechniques() {
+		return usingTechniques;
+	}
+
+	public void setUsingTechniques(List<Technique> usingTechniques) {
+		this.usingTechniques = usingTechniques;
 	}
 
 }
